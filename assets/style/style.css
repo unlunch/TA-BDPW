@@ -66,7 +66,7 @@ header.navbar {
   color: #ffffff;
 }
 
-main {
+#home {
   display: flex;
   align-items: center;
   max-width: 1200px;
@@ -134,7 +134,7 @@ main {
   border: 2px solid black;
 }
 
-section,
+#menu,
 article {
   max-width: 1200px;
   width: 100vw;
@@ -176,20 +176,14 @@ article {
   margin-bottom: 2rem;
 }
 
-.column {
-  float: left;
-  width: 33.3%;
-  padding: 10px 10px;
-}
-
 .row {
-  margin: 0 -5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.column {
+  flex: 1;
 }
 
 .location {
@@ -268,10 +262,6 @@ footer p {
     gap: 2rem 1.5rem;
   }
 
-  main {
-    padding: 1rem 3rem;
-  }
-
   .content {
     flex-direction: column-reverse;
     gap: 2rem;
@@ -288,12 +278,6 @@ footer p {
 
   .description .title {
     font-size: 3rem;
-  }
-
-  .column {
-    width: 50%;
-    display: block;
-    margin-bottom: 20px;
   }
 
   article {
@@ -329,12 +313,6 @@ footer p {
 
   .about h1 {
     font-size: 1.5rem;
-  }
-
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
   }
 
   article {
@@ -385,6 +363,19 @@ footer p {
 
   .nav-list li {
     padding: 1rem 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 75%;
   }
 }
 
